@@ -1,0 +1,102 @@
+{
+    "name": "gekko/mysql",
+    "version": "0.1.0",
+    "description": "The Gekko Framework MySQL package.",
+    "license": "MIT",
+    "homepage": "https://github.com/gekko-framework",
+    "authors": [
+        {
+            "name": "Leonardo Brugnara",
+            "email": "lfbrugnara@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "ext-pdo": "*",
+        "gekko/collections": "^0.1.0",
+        "gekko/config": "^0.1.0",
+        "gekko/database": "^0.1.0",
+        "gekko/env": "^0.1.0",
+        "gekko/helpers": "^0.1.0",
+        "gekko/model": "^0.1.0",
+        "gekko/serialization": "^0.1.0",
+        "gekko/types": "^0.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8",
+        "phpstan/phpstan": "^0.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gekko\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "run-tests": [
+            "phpunit --configuration phpunit.xml --testdox"
+        ]
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../collections"
+        },
+        {
+            "type": "path",
+            "url": "../config"
+        },
+        {
+            "type": "path",
+            "url": "../console"
+        },
+        {
+            "type": "path",
+            "url": "../database"
+        },
+        {
+            "type": "path",
+            "url": "../dependency-injection"
+        },
+        {
+            "type": "path",
+            "url": "../env"
+        },
+        {
+            "type": "path",
+            "url": "../framework"
+        },
+        {
+            "type": "path",
+            "url": "../helpers"
+        },
+        {
+            "type": "path",
+            "url": "../http"
+        },
+        {
+            "type": "path",
+            "url": "../model"
+        },
+        {
+            "type": "path",
+            "url": "../mvc"
+        },
+        {
+            "type": "path",
+            "url": "../mysql"
+        },
+        {
+            "type": "path",
+            "url": "../serialization"
+        },
+        {
+            "type": "path",
+            "url": "../types"
+        }
+    ]
+}

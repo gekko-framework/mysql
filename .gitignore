@@ -1,0 +1,11 @@
+.vscode/
+.*.php
+.logs/*
+.tmp/*
+.env
+
+vendor/
+.phpunit*
+tests/config/database.php
+tests/.migrations/
+tests/Domain/

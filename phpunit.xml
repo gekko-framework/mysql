@@ -1,0 +1,21 @@
+<phpunit 
+    bootstrap="vendor/autoload.php" 
+    colors="true" 
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnError="false"
+    stopOnFailure="false"
+    stopOnIncomplete="false"
+    stopOnSkipped="false"
+    stopOnRisky="false"    
+>
+  <testsuites>
+    <testsuite name="MySQL">
+      <file>tests/Scaffolding/ScaffoldingTest.php</file>
+      <file>tests/Migrations/UpgradeTest.php</file>
+      <file>tests/Relationships/RelationshipsTest.php</file>
+      <file>tests/Migrations/DowngradeTest.php</file>
+    </testsuite>
+  </testsuites>
+</phpunit>
