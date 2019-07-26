@@ -21,7 +21,7 @@ abstract class BaseTestCase extends TestCase
 
         Env::init(self::$outputDir);
 
-        $configPath = Env::rootDir() . DIRECTORY_SEPARATOR . (Env::get("config.path") ?? "config");
+        $configPath = Env::getRootDirectory() . DIRECTORY_SEPARATOR . (Env::get("config.path") ?? "config");
 
         self::$configProvider = new ConfigProvider(Env::get("config.driver") ?? "php", Env::get("config.env"), $configPath);
     } 
