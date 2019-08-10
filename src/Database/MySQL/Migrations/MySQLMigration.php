@@ -42,7 +42,7 @@ class MySQLMigration implements IMigration
             return null;
         
         $source = \file_get_contents($file);
-        return \Gekko\Serialization\JsonSerializer::deserialize($source, Schema::class);
+        return \Gekko\Serialization\JsonSerializer::deserialize(Schema::class, $source);
     }
 
     public function getLastVersion() : int

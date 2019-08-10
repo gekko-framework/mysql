@@ -47,8 +47,8 @@ class MySQLSchemaGenerator implements IGenerator
         {
             // Get previous schema
             $prevSchema = JsonSerializer::deserialize(
-                \file_get_contents(Utils::path($this->path, "v{$versions}.json")),
-                Schema::class
+                Schema::class,
+                \file_get_contents(Utils::path($this->path, "v{$versions}.json"))
             );
             
             if ($schema->equals($prevSchema))
