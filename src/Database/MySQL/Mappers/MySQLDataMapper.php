@@ -327,13 +327,13 @@ class MySQLDataMapper implements IDataMapper
     protected function buildSelect(string $table, string ...$fields) : string
     {
         // Escape the table name if needed
-        if (strpos(trim($table), '`' !== 0))
+        if (strpos(trim($table), '`') !== 0)
             $table = $this->escape($table);
 
         // Get the escaped fields to retrieve
         $fields = Collection::of($fields)
                     ->select(function ($f) {
-                        if (strpos(trim($f), '`' !== 0))
+                        if (strpos(trim($f), '`') !== 0)
                             $f = $this->escape($f); 
                         return $f;
                     })
