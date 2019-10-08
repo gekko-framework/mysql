@@ -17,6 +17,9 @@ $<?= $package->schema ?> = new \Gekko\Database\MySQL\Objects\Schema("<?= $packag
 $<?= $model->tableName ?> = $<?= $package->schema ?>->table("<?= $model->tableName ?>");
 
 <?php foreach ($model->properties as $property): ?>
+
+<?php if ($property->is_array) { continue; } ?>
+
 $<?= $model->tableName ?>_<?= $property->columnName ?> = $<?= $model->tableName ?>->column("<?= $property->columnName ?>");
 
 $<?= $model->tableName ?>_<?= $property->columnName ?>->type(<?= $property->type->__toString() ?>::class)
